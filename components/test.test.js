@@ -11,7 +11,7 @@ localVue.use(vuetify)
 
 
 
-describe('TransitionTest', () => {
+describe('TransitionTest1', () => {
   let component
 
 
