@@ -14,7 +14,8 @@ describe('TestWatch', () => {
       localVue,
       propsData: {
         test: 'first',
-        test2: 'first'
+        test2: 'first',
+        test3: 'first',
       }
     })
   })
@@ -34,6 +35,14 @@ describe('TestWatch', () => {
         })
         await localVue.nextTick()
         expect(component.vm.test2).toBe('second')
+      })
+
+      it('without immediate mounted', async () => {
+        component.setProps({
+          test3: 'second'
+        })
+        await localVue.nextTick()
+        expect(component.vm.test3).toBe('second')
       })
     }
   )
